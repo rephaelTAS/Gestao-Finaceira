@@ -1,9 +1,37 @@
 [
     {
+        "id": 1,
+        "date": "2024-05-16",
+        "description": "MAcarao",
+        "amount": 564,
+        "status": "Saida"
+    },
+    {
         "id": 2,
-        "date": "2024-10-13",
-        "description": "Mam\u00e3o",
-        "amount": 45,
-        "status": "Despesa"
+        "date": "2024-12-16",
+        "description": "Peixe",
+        "amount": 554,
+        "status": "Saida"
+    },
+    {
+        "id": 3,
+        "date": "2024-09-16",
+        "description": "Batata",
+        "amount": 445,
+        "status": "Saida"
+    },
+    {
+        "id": 4,
+        "date": "2024-10-16",
+        "description": "Venda de ovos",
+        "amount": 110,
+        "status": "Entrada"
+    },
+    {
+        "id": 5,
+        "date": "2024-10-21",
+        "description": "Trabalho",
+        "amount": 6000,
+        "status": "Entrada"
     }
 ]

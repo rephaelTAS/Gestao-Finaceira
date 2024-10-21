@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 import json
+import pandas as pd
 
 class DB_Config:
     def __init__(self):
@@ -37,6 +38,14 @@ class DB_Config:
             print(f"{expense['id']:<4} {expense['date']:<12} {expense['description']:<15} {expense['amount']:<7}  {expense['status']:<20}")
             print("")
 
+    def filtro_categoria(self, categoria):
+        expenses = self.rede_file()
+        print(f"{'ID':<4} {'Date':<12} {'Description':<15} {'Amount':<7} {'Status':<20}")
+        for expense in expenses:
+            if expense['status'] == categoria:
+                print(f"{expense['id']:<4} {expense['date']:<12} {expense['description']:<15} {expense['amount']:<7}  {expense['status']:<20}")
+                print("")
+
     def delete_expense(self, id):
         expenses = self.rede_file()
         expenses = [expense for expense in expenses if expense['id'] != id]
@@ -67,3 +76,7 @@ class DB_Config:
                 print(f"Expense {id} updated successfully")
                 return
         print(f"Expense with ID {id} not found")
+
+    def export_csv(self):
+        df = pd.read_json(self.ficheiro)
+        return df
