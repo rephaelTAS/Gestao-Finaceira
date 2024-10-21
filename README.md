@@ -32,5 +32,4 @@ Este Gestor visa garatir que todos os teus gastos sejam bem controlados
         [10] Sair 
 
 Link do Github
-
 https://github.com/rephaelTAS/Gestao-Finaceira
